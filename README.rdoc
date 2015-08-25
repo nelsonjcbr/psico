@@ -1,0 +1,58 @@
+== README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
+
+
+Please feel free to use a different markup language if you do not plan to run
+<tt>rake doc:app</tt>.
+
+
+Funções resumidas
+
+Requisitos não funcionais
+-Paginação padrão 50 registros
+
+Requisitos funcionais
+-Campos personalizados por tipo de evolução: Indagações utilizadas nas evoluções, cfe: RailsCast #403
+-Paciente     : Dados cadastrais do paciente
+                Filtros: Nome, nome mae
+-Internados   : Lista dos pacientes internados, se alterar a data, traz os internados no dia escolhido
+                Filtros: Nome, setor
+                Deixar os filtros gravados
+-Altas        : Lista por data de alta decrescente
+                Filtros: Nome, setor
+                Deixar os filtros gravados
+-Acolhimento  : Questionario de acolhimento, varias perguntas, inclusive com checks
+-Evoluções    : Campo texto
+-Desligamento : Questionario de desligamento, varias perguntas, inclusive com checks
+
+rails g scaffold Post title:string description:text
+rails g bootstrap:themed Posts
+
+Tratamento de campos protegidos no controller
+  http://edgeapi.rubyonrails.org/classes/ActionController/StrongParameters.html
+
+Master/Detail
+  http://railscasts.com/episodes/403-dynamic-forms?view=asciicast
+

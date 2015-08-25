@@ -1,0 +1,36 @@
+<%- model_class = EvolucaoTipo -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:nome) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @evolucao_tipos.each do |evolucao_tipo| %>
+      <tr>
+        <td><%= link_to evolucao_tipo.id, evolucao_tipo_path(evolucao_tipo) %></td>
+        <td><%= evolucao_tipo.nome %></td>
+        <td><%=l evolucao_tipo.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_evolucao_tipo_path(evolucao_tipo), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      evolucao_tipo_path(evolucao_tipo),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_evolucao_tipo_path,
+            :class => 'btn btn-primary' %>

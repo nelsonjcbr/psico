@@ -1,0 +1,236 @@
+<%= form_for @paciente, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :cpf, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :cpf, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :cns, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :cns, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :data_expedicao_doc, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :data_expedicao_doc, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :orgao_expedicao_doc, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :orgao_expedicao_doc, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :uf_expedicao_doc, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :uf_expedicao_doc, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :rg, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :rg, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :nome, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :nome, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :data_nascimento, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :data_nascimento, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :sexo, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :sexo, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :cor_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :cor_id, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :estcivil_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :estcivil_id, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :local_trabalho, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :local_trabalho, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :nacionalidade_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :nacionalidade_id, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :naturalidade, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :naturalidade, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :religiao_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :religiao_id, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :nome_conjuge, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :nome_conjuge, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :nome_pai, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :nome_pai, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :nome_mae, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :nome_mae, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :tipo_sangue, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :tipo_sangue, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :grauinstrucao_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :grauinstrucao_id, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :codigo_same, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :codigo_same, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :profissao, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :profissao, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :fone, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :fone, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :cbo_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :cbo_id, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :etnia_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :etnia_id, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :email, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :email, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :endereco, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :endereco, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :complemento, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :complemento, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :nome_bairro, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :nome_bairro, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :cidade_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :cidade_id, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :cep, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :cep, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :tb301_logradouro, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :tb301_logradouro, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :nro_endereco, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :nro_endereco, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :bairro_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :bairro_id, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :logradouro_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :logradouro_id, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :latitude, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :latitude, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :longitude, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :longitude, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :inativo, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :inativo, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                pacientes_path, :class => 'btn' %>
+  </div>
+<% end %>

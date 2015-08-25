@@ -1,0 +1,34 @@
+<%- model_class = Evolucao -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:paciente_id) %>:</strong></dt>
+  <dd><%= @evolucao.paciente_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:evolucao_tipo_id) %>:</strong></dt>
+  <dd><%= @evolucao.evolucao_tipo_id %></dd>
+</dl>
+
+  
+<dl class="">
+  <% @evolucao.evolucao_tipo.campos.each do |campo| %>
+      <dt><strong><%= campo.titulo %></strong></dt>
+      <dd><%= @evolucao.propriedades[campo.nome] %></dd>
+  <% end %>
+
+</dl>
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              evolucaos_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_evolucao_path(@evolucao), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              evolucao_path(@evolucao),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
+<hr>
+Exportar para: <%= link_to 'PDF', evolucao_path(@evolucao, :format => :pdf) %>

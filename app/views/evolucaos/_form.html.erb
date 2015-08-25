@@ -1,0 +1,30 @@
+<%= form_for @evolucao, :html => { :class => '' } do |f| %>
+  <div class="control-group">
+    <div class="controls">
+        <h3><%= ('Paciente: ' + @paciente.id.to_s + '-' + @paciente.nome) unless @paciente.nil? %></h3>
+        <h3><%= ('Paciente: ' + @evolucao.paciente.id.to_s + '-' + @evolucao.paciente.nome) if     @paciente.nil? %></h3>
+    </div> 
+  </div>
+  <%= f.hidden_field :paciente_id %>
+  <div class="control-group">
+    <%= f.label :data, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :data, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <%= f.hidden_field :evolucao_tipo_id %>
+
+  <%= f.fields_for :propriedades, OpenStruct.new(@evolucao.propriedades) do |builder| %>
+    <% @evolucao.evolucao_tipo.campos.each do |campo| %>
+      <%= render "evolucaos/campos/#{campo.tipo_campo}", campo: campo, f: builder %>
+    <% end %>
+  <% end %>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                evolucaos_path, :class => 'btn' %>
+  </div>
+<% end %>
+

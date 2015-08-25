@@ -1,0 +1,35 @@
+<%- model_class = Paciente -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:cns) %></th>
+      <th><%= model_class.human_attribute_name(:nome) %></th>
+      <th><%= model_class.human_attribute_name(:data_nascimento) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @pacientes.each do |paciente| %>
+      <tr>
+        <td><%= link_to paciente.id, paciente_path(paciente) %></td>
+        <td><%= paciente.cns %></td>
+        <td><%= paciente.nome %></td>
+        <td><%= paciente.data_nascimento %></td>
+        <td>
+          <%= form_tag evolucaos_path, method: :get do %>
+            <%= hidden_field_tag(:paciente, paciente.id, :id => "id") %>
+            <%= submit_tag "Evolução", nome: nil, :class => 'btn btn-mini' %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_paciente_path,
+            :class => 'btn btn-primary' %>
