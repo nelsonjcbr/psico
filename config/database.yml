@@ -17,7 +17,7 @@
 development:
   adapter: postgresql
   encoding: utf8
-  database: ghosp_hsr_luzerna
+  database: psico_dev
   pool: 5
   host: localhost
   username: postgres
@@ -55,15 +55,18 @@ test:
   username: med
   password:
 
+# Roda na 192.168.34.106
 production:
   adapter: postgresql
   encoding: utf8
-  database: ghosp_hsr_luzerna
+  host: localhost
+  database: hsr_psico
   pool: 5
   username: postgres
   password: dtcdat5432
   schema_search_path: gestho, public
-  port: 5434
+  port: 5433
+
 
 banco_legado:
   adapter: postgresql
