@@ -16,7 +16,7 @@
   <%= f.hidden_field :evolucao_tipo_id %>
 
   <%= f.fields_for :propriedades, OpenStruct.new(@evolucao.propriedades) do |builder| %>
-    <% @evolucao.evolucao_tipo.campos.each do |campo| %>
+    <% @evolucao.evolucao_tipo.campos.order(:titulo).each do |campo| %>
       <%= render "evolucaos/campos/#{campo.tipo_campo}", campo: campo, f: builder %>
     <% end %>
   <% end %>

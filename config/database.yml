@@ -25,7 +25,6 @@ development:
   schema_search_path: gestho, public
   port: 5434
   
-
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
   # domain sockets, so uncomment these lines.
@@ -56,7 +55,7 @@ test:
   password:
 
 # Roda na 192.168.34.106
-production:
+productionb:
   adapter: postgresql
   encoding: utf8
   host: localhost
@@ -67,8 +66,18 @@ production:
   schema_search_path: gestho, public
   port: 5433
 
+production:
+  adapter: postgresql
+  encoding: utf8
+  host: localhost
+  database: hsr_psico
+  pool: 5
+  username: postgres
+  password: dtcdat5432
+  schema_search_path: gestho, public
+  port: 5434
 
-banco_legado:
+banco_legadob:
   adapter: postgresql
   encoding: utf8
   database: ghosp_hsr_luzerna
@@ -78,3 +87,14 @@ banco_legado:
   password: dtcdat5432
   schema_search_path: gestho, public
   port: 5432
+
+banco_legado:
+  adapter: postgresql
+  encoding: utf8
+  database: ghosp_hsr_luzerna
+  pool: 5
+  host: localhost
+  username: postgres
+  password: dtcdat5432
+  schema_search_path: gestho, public
+  port: 5434

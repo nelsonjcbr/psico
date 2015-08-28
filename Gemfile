@@ -33,7 +33,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'will_paginate-bootstrap', '1.0.1'
+gem 'kaminari'
+gem 'bootstrap-kaminari-views'
 gem 'rails4-autocomplete', '~> 1.0.7'
 
 # Use ActiveModel has_secure_password

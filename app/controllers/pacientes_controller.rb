@@ -6,8 +6,8 @@ class PacientesController < ApplicationController
   # GET /pacientes.json
   def index
     # byebug
-    @pacientes = Paciente.all unless params[:paciente_filtro]
-    @pacientes = Paciente.where("nome ilike ?", "#{params[:paciente_filtro]}%") if params[:paciente_filtro]
+    @pacientes = Paciente.order(:nome).page params[:page] unless params[:paciente_filtro]
+    @pacientes = Paciente.where("nome ilike ?", "#{params[:paciente_filtro]}%").order(:nome).page params[:page] if params[:paciente_filtro]
   end
 
   # GET /pacientes/1

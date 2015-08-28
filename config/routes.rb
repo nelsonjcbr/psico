@@ -1,5 +1,6 @@
 Med::Application.routes.draw do
 
+  get "alta/index"
   devise_for :users
   resources :evolucaos do
     get :autocomplete_paciente_nome, :on => :collection
@@ -9,6 +10,10 @@ Med::Application.routes.draw do
 
   resources :pacientes
 
+  resources :internados
+  
+  resources :altas
+  
   get "welcome/index"
 
 #  map.resources :pacientes, :has_many => :receitas, :has_many => :receitais
