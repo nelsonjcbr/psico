@@ -1,0 +1,36 @@
+<%- model_class = Alta -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+
+<%= paginate @altas, :theme => 'twitter-bootstrap-3' %>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:nome_setor) %></th>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:nome_paciente) %></th>
+      <th><%= model_class.human_attribute_name(:data_entrada) %></th>
+      <th><%= model_class.human_attribute_name(:data_alta) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @altas.each do |alta| %>
+      <tr>
+        <td><%= alta.intern.setor.nome %></td>
+        <td><%= alta.intern_id %></td>
+        <td><%= link_to alta.intern.paciente.nome, paciente_path(alta.intern.paciente_id) %></td>
+        <td><%= alta.intern.data_entrada %></td>
+        <td><%= alta.data_alta %></td>
+        <td>
+          <%= form_tag evolucaos_path, method: :get do %>
+            <%= hidden_field_tag(:paciente, alta.intern.paciente_id, :id => "id") %>
+            <%= submit_tag "Evolução", nome: nil, :class => 'btn btn-mini' %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

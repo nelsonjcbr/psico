@@ -1,0 +1,32 @@
+<%- model_class = Intern -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:nome_setor) %></th>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:nome_paciente) %></th>
+      <th><%= model_class.human_attribute_name(:data_entrada) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @internados.each do |intern| %>
+      <tr>
+        <td><%= intern.nome_setor %></td>
+        <td><%= intern.id %></td>
+        <td><%= link_to intern.nome_paciente, paciente_path(intern.paciente_id) %></td>
+        <td><%= intern.data_entrada %></td>
+        <td>
+          <%= form_tag evolucaos_path, method: :get do %>
+            <%= hidden_field_tag(:paciente, intern.paciente_id, :id => "id") %>
+            <%= submit_tag "Evolução", nome: nil, :class => 'btn btn-mini' %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
