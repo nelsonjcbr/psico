@@ -70,6 +70,6 @@ class EvolucaoTiposController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def evolucao_tipo_params
-      params.require(:evolucao_tipo).permit(:nome, campos_attributes: [ :id, :nome, :titulo, :requerido, :tipo_campo, :_destroy ])
+      params.require(:evolucao_tipo).permit(:nome, :inativo, campos_attributes: [ :id, :nome, :titulo, :requerido, :tipo_campo, :_destroy ])
     end
 end

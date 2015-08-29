@@ -1,9 +1,11 @@
+<fieldset>
 <div class="nested-fields">
     <%= f.select :tipo_campo, %w{text_field check_box} %>
-    <%= f.input :nome, placeholder: 'nome_campo', :class => 'text_field col-sm-2' %>
-    <%= f.input :titulo, placeholder: 'titulo', :class => 'text_field col-sm-4' %>
+    <%= f.input :nome, placeholder: 'nome_campo', :class => 'col-sm-2' %>
+    <%= f.input :titulo, placeholder: 'titulo', as: :text, :class => 'col-sm-4' %>
     <%= f.check_box :requerido %><%= f.label :requerido , :class => 'control_label col-sm-3' %>
     <%= f.hidden_field :_destroy %>
     <%= link_to '[remove]', '#', class: 'remove_fields btn btn-danger' %>
   <hr>
 </div>
+</fieldset>

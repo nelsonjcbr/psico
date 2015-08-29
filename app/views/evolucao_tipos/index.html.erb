@@ -15,7 +15,10 @@
     <% @evolucao_tipos.each do |evolucao_tipo| %>
       <tr>
         <td><%= link_to evolucao_tipo.id, evolucao_tipo_path(evolucao_tipo) %></td>
-        <td><%= evolucao_tipo.nome %></td>
+        <td><%=raw '<del>' if evolucao_tipo.inativo?  %>
+          <%= evolucao_tipo.nome %>
+          <%=raw '</del>' if evolucao_tipo.inativo?  %>
+        </td>
         <td><%=l evolucao_tipo.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
