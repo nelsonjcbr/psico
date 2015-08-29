@@ -58,3 +58,5 @@ gem 'wkhtmltopdf-binary'
 gem 'wicked_pdf'
 
 gem 'devise', '3.4.1'
+
+gem 'simple_form'
