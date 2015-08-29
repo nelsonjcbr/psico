@@ -58,7 +58,8 @@ CREATE TABLE evolucao_tipos (
     id integer NOT NULL,
     nome character varying(255),
     created_at timestamp without time zone,
-    updated_at timestamp without time zone
+    updated_at timestamp without time zone,
+    inativo boolean
 );
 
 
@@ -285,3 +286,5 @@ INSERT INTO schema_migrations (version) VALUES ('20150628194939');
 INSERT INTO schema_migrations (version) VALUES ('20150628195027');
 
 INSERT INTO schema_migrations (version) VALUES ('20150804223618');
+
+INSERT INTO schema_migrations (version) VALUES ('20150829145619');

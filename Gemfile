@@ -36,7 +36,7 @@ end
 gem 'kaminari'
 gem 'bootstrap-kaminari-views'
 gem 'rails4-autocomplete', '~> 1.0.7'
-
+gem 'simple_form'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

@@ -5,11 +5,28 @@ rails g bootstrap:themed Posts
 
 rvm 2.2.0, fiz isso em 26/07 porque instalei o byebug
 
-A fazer
-[ ] Configurar no Github
-[ ] Puxar no 192.168.34.60
-[ ] Evolucao a partir do paciente
-[x] Cadastro do paciente, só pra consulta
-[ ] Internações só pra consulta
-[ ] ALtas só pra consulta
+Deploy
+-Inovadora 192.168.34.106 - 
+Usuario: nelson 
+pasta  : /home/nelson/psico
+bundle : entrar com usuario inovadora na pasta psico
 
+A fazer
+[.] Simple form
+[.] Colocar marca para desabilitar um tipo de evolução e mensagem dizendo que um tipo de evolução não deve ser alterado,
+    o Sistema guarda só o tipo da evolucao, depois os campos
+[ ] Alterar a tela de evolução, colocar a pergunta em texto para poder pular linha, fica melhor nos casos de check pq o primeiro 
+    check esta sendo colocado ao lado da primeira linha, ou achar outra forma para colocar esses checks.
+[ ] Breadcrumb
+[ ] Ao entrar na evolucao, ativar o campo tipo, pq com select o usuario entra facil em Acolhimento/Evolucao/Alta
+[ ] Verificar impressão de ficha de acolhimento
+[ ] Verificar impressão de ficha de alta
+[ ] Cadastro do paciente, só pra consulta, o show está estranho
+[ ] Internações só pra consulta
+[ ] Altas só pra consulta
+[ ] Configurar para pt-BR
+[ ] Ferramenta de deploy
+    
+
+
+ 

@@ -1,9 +1,14 @@
 <%= form_for @evolucao_tipo, :html => { :class => 'form-horizontal' } do |f| %>
+
   <div class="control-group">
     <%= f.label :nome, :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :nome, :class => 'text_field' %>
     </div>
+    <div class="controls">
+    <%= f.check_box :inativo %><%= f.label :inativo , :class => 'control_label col-sm-3' %>
+    </div>
+
   </div>
 
     <%= f.fields_for :campos do |builder| %>
@@ -17,3 +22,11 @@
                 evolucao_tipos_path, :class => 'btn' %>
   </div>
 <% end %>
+
+<%= glyph(:pencil) %> <i class="icon-pencil"></i>
+
+<%= glyph(:pencil, {tag: :span}) %> <span class="icon-pencil"></span>
+
+<%= badge(12, :warning) %> <span class="badge badge-warning">12</span>
+
+<%= tag_label('Gut!', :success) %> <span class="label label-success">Gut!</span>
