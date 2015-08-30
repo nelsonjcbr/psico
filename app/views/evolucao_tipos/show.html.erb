@@ -8,10 +8,10 @@
   <dd><%= @evolucao_tipo.nome %></dd>
 </dl>
 
-<% @evolucao_tipo.campos.each do |c| %>
+<% @evolucao_tipo.campos.order(:nome).each do |c| %>
   <dl class="dl-horizontal">
     <dt><strong><%= c.nome %></strong></dt>
-    <dd><%= c.tipo_campo + ' ' + c.titulo + ' ' + (c.requerido ? '(Requerido)' : '') %>
+    <dd><%= (c.tipo_campo == 'check_box' ? '[]' : '--') + ' ' + c.titulo + ' ' + (c.requerido ? '(Requerido)' : '') %></dd>
   </dl>
 <% end %>
 <div class="form-actions">

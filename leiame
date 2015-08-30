@@ -11,16 +11,19 @@ Usuario: nelson
 pasta  : /home/nelson/psico
 bundle : entrar com usuario inovadora na pasta psico
 
+Coloquei mais CSS no scaffold para funcionar o bs-callout como na pagina do bootstrap
+
 A fazer
-[.] Simple form
-[.] Colocar marca para desabilitar um tipo de evolução e mensagem dizendo que um tipo de evolução não deve ser alterado,
+[x] Simple form
+[x] Colocar marca para desabilitar um tipo de evolução e mensagem dizendo que um tipo de evolução não deve ser alterado,
     o Sistema guarda só o tipo da evolucao, depois os campos
-[ ] Alterar a tela de evolução, colocar a pergunta em texto para poder pular linha, fica melhor nos casos de check pq o primeiro 
+[x] Alterar a tela de evolução, colocar a pergunta em texto para poder pular linha, fica melhor nos casos de check pq o primeiro 
     check esta sendo colocado ao lado da primeira linha, ou achar outra forma para colocar esses checks.
+[x] Melhor Tela de questionario, perguntas check
 [ ] Breadcrumb
-[ ] Ao entrar na evolucao, ativar o campo tipo, pq com select o usuario entra facil em Acolhimento/Evolucao/Alta
-[ ] Verificar impressão de ficha de acolhimento
-[ ] Verificar impressão de ficha de alta
+[N] Ao entrar na evolucao, ativar o campo tipo, pq com select o usuario entra facil em Acolhimento/Evolucao/Alta
+[X] Arrumar o show da evolucao, esta com layout ruim
+[X] Arrumar a impressão das fichas, aproveirar o que foi feito no show
 [ ] Cadastro do paciente, só pra consulta, o show está estranho
 [ ] Internações só pra consulta
 [ ] Altas só pra consulta

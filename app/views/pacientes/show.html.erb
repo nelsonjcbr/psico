@@ -4,58 +4,110 @@
 </div>
 
 <dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:cns) %>:</strong></dt>
-  <dd><%= @paciente.cns %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:nome) %>:</strong></dt>
-  <dd><%= @paciente.nome %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:data_nascimento) %>:</strong></dt>
-  <dd><%= @paciente.data_nascimento %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:sexo) %>:</strong></dt>
-  <dd><%= @paciente.sexo %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:estcivil_id) %>:</strong></dt>
-  <dd><%= @paciente.estcivil_id %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:local_trabalho) %>:</strong></dt>
-  <dd><%= @paciente.local_trabalho %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:profissao) %>:</strong></dt>
-  <dd><%= @paciente.profissao %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:nacionalidade_id) %>:</strong></dt>
-  <dd><%= @paciente.nacionalidade_id %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:naturalidade) %>:</strong></dt>
-  <dd><%= @paciente.naturalidade %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:religiao_id) %>:</strong></dt>
-  <dd><%= @paciente.religiao_id %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:nome_conjuge) %>:</strong></dt>
-  <dd><%= @paciente.nome_conjuge %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:nome_pai) %>:</strong></dt>
-  <dd><%= @paciente.nome_pai %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:nome_mae) %>:</strong></dt>
-  <dd><%= @paciente.nome_mae %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:tipo_sangue) %>:</strong></dt>
-  <dd><%= @paciente.tipo_sangue %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:grauinstrucao_id) %>:</strong></dt>
-  <dd><%= @paciente.grauinstrucao_id %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:fone) %>:</strong></dt>
-  <dd><%= @paciente.fone %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:email) %>:</strong></dt>
-  <dd><%= @paciente.email %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:endereco) %>:</strong></dt>
-  <dd><%= @paciente.endereco %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:complemento) %>:</strong></dt>
-  <dd><%= @paciente.complemento %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:nome_bairro) %>:</strong></dt>
-  <dd><%= @paciente.nome_bairro %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:cidade_id) %>:</strong></dt>
-  <dd><%= @paciente.cidade_id %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:cep) %>:</strong></dt>
-  <dd><%= @paciente.cep %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:tb301_logradouro) %>:</strong></dt>
-  <dd><%= @paciente.tb301_logradouro %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:nro_endereco) %>:</strong></dt>
-  <dd><%= @paciente.nro_endereco %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:bairro_id) %>:</strong></dt>
-  <dd><%= @paciente.bairro_id %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:logradouro_id) %>:</strong></dt>
-  <dd><%= @paciente.logradouro_id %></dd>
+  <% unless @paciente.cns.blank? %>
+    <dt><strong><%= model_class.human_attribute_name(:cns) %>:</strong></dt>
+    <dd><%= @paciente.cns %></dd>
+  <% end %> 
+  <% unless @paciente.nome.blank? %>
+    <dt><strong><%= model_class.human_attribute_name(:nome) %>:</strong></dt>
+    <dd><%= @paciente.nome %></dd>
+  <% end %> 
+  <% unless @paciente.data_nascimento.blank? %>
+    <dt><strong><%= model_class.human_attribute_name(:data_nascimento) %>:</strong></dt>
+    <dd><%= @paciente.data_nascimento %></dd>
+  <% end %> 
+  <% unless @paciente.sexo.blank? %>
+    <dt><strong><%= model_class.human_attribute_name(:sexo) %>:</strong></dt>
+    <dd><%= @paciente.sexo %></dd>
+  <% end %> 
+  <% unless @paciente.estcivil_id.blank? %>
+    <dt><strong><%= model_class.human_attribute_name(:estcivil_id) %>:</strong></dt>
+    <dd><%= @paciente.estcivil_id %></dd>
+  <% end %> 
+  <% unless @paciente.local_trabalho.blank? %>
+    <dt><strong><%= model_class.human_attribute_name(:local_trabalho) %>:</strong></dt>
+    <dd><%= @paciente.local_trabalho %></dd>
+  <% end %> 
+  <% unless @paciente.profissao.blank? %>
+    <dt><strong><%= model_class.human_attribute_name(:profissao) %>:</strong></dt>
+    <dd><%= @paciente.profissao %></dd>
+  <% end %> 
+  <% unless @paciente.nacionalidade_id.blank? %>
+    <dt><strong><%= model_class.human_attribute_name(:nacionalidade_id) %>:</strong></dt>
+    <dd><%= @paciente.nacionalidade_id %></dd>
+  <% end %> 
+  <% unless @paciente.naturalidade.blank? %>
+    <dt><strong><%= model_class.human_attribute_name(:naturalidade) %>:</strong></dt>
+    <dd><%= @paciente.naturalidade %></dd>
+  <% end %> 
+  <% unless @paciente.religiao_id.blank? %>
+    <dt><strong><%= model_class.human_attribute_name(:religiao_id) %>:</strong></dt>
+    <dd><%= @paciente.religiao_id %></dd>
+  <% end %> 
+  <% unless @paciente.nome_conjuge.blank? %>
+    <dt><strong><%= model_class.human_attribute_name(:nome_conjuge) %>:</strong></dt>
+    <dd><%= @paciente.nome_conjuge %></dd>
+  <% end %> 
+  <% unless @paciente.nome_pai.blank? %>
+    <dt><strong><%= model_class.human_attribute_name(:nome_pai) %>:</strong></dt>
+    <dd><%= @paciente.nome_pai %></dd>
+  <% end %> 
+  <% unless @paciente.nome_mae.blank? %>
+    <dt><strong><%= model_class.human_attribute_name(:nome_mae) %>:</strong></dt>
+    <dd><%= @paciente.nome_mae %></dd>
+  <% end %> 
+  <% unless @paciente.tipo_sangue.blank? %>
+    <dt><strong><%= model_class.human_attribute_name(:tipo_sangue) %>:</strong></dt>
+    <dd><%= @paciente.tipo_sangue %></dd>
+  <% end %> 
+  <% unless @paciente.grauinstrucao_id.blank? %>
+    <dt><strong><%= model_class.human_attribute_name(:grauinstrucao_id) %>:</strong></dt>
+    <dd><%= @paciente.grauinstrucao_id %></dd>
+  <% end %> 
+  <% unless @paciente.fone.blank? %>
+    <dt><strong><%= model_class.human_attribute_name(:fone) %>:</strong></dt>
+    <dd><%= @paciente.fone %></dd>
+  <% end %> 
+  <% unless @paciente.email.blank? %>
+    <dt><strong><%= model_class.human_attribute_name(:email) %>:</strong></dt>
+    <dd><%= @paciente.email %></dd>
+  <% end %> 
+  <% unless @paciente.endereco.blank? %>
+    <dt><strong><%= model_class.human_attribute_name(:endereco) %>:</strong></dt>
+    <dd><%= @paciente.endereco %></dd>
+  <% end %> 
+  <% unless @paciente.complemento.blank? %>
+    <dt><strong><%= model_class.human_attribute_name(:complemento) %>:</strong></dt>
+    <dd><%= @paciente.complemento %></dd>
+  <% end %> 
+  <% unless @paciente.nome_bairro.blank? %>
+    <dt><strong><%= model_class.human_attribute_name(:nome_bairro) %>:</strong></dt>
+    <dd><%= @paciente.nome_bairro %></dd>
+  <% end %> 
+  <% unless @paciente.cidade_id.blank? %>
+    <dt><strong><%= model_class.human_attribute_name(:cidade_id) %>:</strong></dt>
+    <dd><%= @paciente.cidade_id %></dd>
+  <% end %> 
+  <% unless @paciente.cep.blank? %>
+    <dt><strong><%= model_class.human_attribute_name(:cep) %>:</strong></dt>
+    <dd><%= @paciente.cep %></dd>
+  <% end %> 
+  <% unless @paciente.tb301_logradouro.blank? %>
+    <dt><strong><%= model_class.human_attribute_name(:tb301_logradouro) %>:</strong></dt>
+    <dd><%= @paciente.tb301_logradouro %></dd>
+  <% end %> 
+  <% unless @paciente.nro_endereco.blank? %>
+    <dt><strong><%= model_class.human_attribute_name(:nro_endereco) %>:</strong></dt>
+    <dd><%= @paciente.nro_endereco %></dd>
+  <% end %> 
+  <% unless @paciente.bairro_id.blank? %>
+    <dt><strong><%= model_class.human_attribute_name(:bairro_id) %>:</strong></dt>
+    <dd><%= @paciente.bairro_id %></dd>
+  <% end %> 
+  <% unless @paciente.logradouro_id.blank? %>
+    <dt><strong><%= model_class.human_attribute_name(:logradouro_id) %>:</strong></dt>
+    <dd><%= @paciente.logradouro_id %></dd>
+  <% end %> 
 </dl>
 
 <div class="form-actions">

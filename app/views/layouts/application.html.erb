@@ -54,7 +54,7 @@
       <div class="row-fluid">
         <div class="span12">
           <% if user_signed_in? %>
-            Usuario: <%= current_user.email %>
+            <span class="icon-user"> <%= current_user.email %></span>
             <%= link_to "Desconectar", destroy_user_session_path, :id => 'nav2-logout' , :title => "Sair do sistema"%>
             
           <% end %> 

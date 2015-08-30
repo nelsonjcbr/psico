@@ -59,7 +59,7 @@ CREATE TABLE evolucao_tipos (
     nome character varying(255),
     created_at timestamp without time zone,
     updated_at timestamp without time zone,
-    inativo boolean
+    inativo boolean DEFAULT false
 );
 
 

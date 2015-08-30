@@ -9,6 +9,7 @@
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:paciente_id) unless @paciente %></th> 
       <th><%= model_class.human_attribute_name(:evolucao_tipo_id) %></th>
+      <th><%= model_class.human_attribute_name(:data) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -19,6 +20,7 @@
         <td><%= link_to evolucao.id, evolucao_path(evolucao) %></td>
         <td><%= evolucao.paciente.nome if evolucao.paciente unless @paciente %></td>
         <td><%= evolucao.evolucao_tipo.nome %></td>
+        <td><%= evolucao.data %></td>
         <td><%=l evolucao.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
@@ -36,7 +38,7 @@
 
 <% if @paciente %>
   <%= form_tag new_evolucao_path, method: :get do %>
-    <%= select_tag :evolucao_tipo_id, options_from_collection_for_select(EvolucaoTipo.all, :id, :nome) %>
+    <%= select_tag :evolucao_tipo_id, options_from_collection_for_select(EvolucaoTipo.ativos, :id, :nome) %>
     <%= hidden_field_tag(:paciente_id, @paciente.id, :id => "id") %>
     <%= submit_tag "Nova", nome: nil, :class => 'btn btn-primary' %>
   <% end %>

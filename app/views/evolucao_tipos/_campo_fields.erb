@@ -1,12 +1,10 @@
 <fieldset>
-  <div class="control_group">
-    <%= f.select :tipo_campo, %w{text_field check_box} %>
-    <%= f.text_field :nome, placeholder: 'nome_campo', :class => 'text_field col-sm-2' %>
-    <%= f.text_field :titulo, placeholder: 'titulo', :class => 'text_field col-sm-4' %>
-    <div class="controls">
-    <%= f.check_box :requerido %><%= f.label :requerido , :class => 'control_label col-sm-3' %>
-    </div>
+  <div class="bs-callout bs-callout-warning form" >
+    <%= f.select :tipo_campo,  %w{label text_field check_box}, prompt: "Tipo para o campo....." %>
+    <%= f.input :nome, label: 'Nome campo(Usado para ordenar)', input_html: { maxlength: 20 } %>
+    <%= f.input :titulo, label: 'Titulo/Questão', as: :text %>
+    <%= f.input :requerido, label: 'preenchimento obrigatorio', :class => 'control_label col-sm-3' %>
     <%= f.hidden_field :_destroy %>
-    <%= link_to '[remove]', '#', class: 'remove_fields' %>
+    <%= link_to 'remove', '#', class: 'remove_fields btn btn-danger' %>
   </div>
 </fieldset>
