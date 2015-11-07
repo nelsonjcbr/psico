@@ -5,7 +5,7 @@
 
 <dl class="dl-horizontal">
   <dt><strong><%= model_class.human_attribute_name(:paciente_id) %>:</strong></dt>
-  <dd><%= @evolucao.paciente_id.to_s + '-' + @evolucao.paciente.nome %></dd>
+  <dd><%= @evolucao.paciente.nome_e_id %></dd>
 </dl>
 
 <dl class="">

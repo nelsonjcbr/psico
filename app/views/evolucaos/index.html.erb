@@ -2,7 +2,7 @@
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
 </div>
-<h3><%= ('Paciente: ' + @paciente.id.to_s + '-' + @paciente.nome) if @paciente %></h3>
+<h3><%= ('Paciente: ' + @paciente.nome_e_id) if @paciente %></h3>
 <table class="table table-striped">
   <thead>
     <tr>

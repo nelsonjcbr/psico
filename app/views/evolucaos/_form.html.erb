@@ -1,14 +1,14 @@
 <%= simple_form_for @evolucao do |f| %>
   <div class="control-group">
     <div class="controls">
-        <h3><%= ('Paciente: ' + @paciente.id.to_s + '-' + @paciente.nome) unless @paciente.nil? %></h3>
-        <h3><%= ('Paciente: ' + @evolucao.paciente.id.to_s + '-' + @evolucao.paciente.nome) if     @paciente.nil? %></h3>
+        <h3><%= ('Paciente: ' + @paciente.nome_e_id) unless @paciente.nil? %></h3>
+        <h3><%= ('Paciente: ' + @evolucao.paciente.nome_e_id) if     @paciente.nil? %></h3>
     </div> 
   </div>
 
   <%= f.hidden_field :paciente_id %>
 
-  <%= f.input :data, as: :string, label: 'Data da evolução' %>
+  <%= f.date_field :data, format: :default, label: 'Data da evolução' %>
 
   <%= f.hidden_field :evolucao_tipo_id %>
 

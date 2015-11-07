@@ -3,11 +3,9 @@
   <h1><%= @evolucao.evolucao_tipo.nome %></h1>
 </div>
 
-<dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:paciente_id) %>:</strong></dt>
-  <dd><%= @evolucao.paciente_id.to_s + ' ' + @evolucao.paciente.nome %></dd>
-</dl>
+  <p><strong><%=  @evolucao.paciente.nome_e_id %></strong>
 
+  <p>Data: <%= @evolucao.data.to_s %>
   
 <dl class="">
   <% @evolucao.evolucao_tipo.campos.order(:nome).each do |campo| %>
