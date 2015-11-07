@@ -4,7 +4,7 @@
 
   <%= f.input :inativo, label: 'Marca tipo de evolução como inativa' %>
 
-  <%= f.simple_fields_for :campos do |builder| %>
+  <%= f.simple_fields_for :campos, @campos do |builder| %>
     <%= render 'campo_fields', f: builder %>
   <% end %>
 

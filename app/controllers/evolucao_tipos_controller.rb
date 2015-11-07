@@ -1,11 +1,15 @@
 class EvolucaoTiposController < ApplicationController
   before_action :authenticate_user!
   before_action :set_evolucao_tipo, only: [:show, :edit, :update, :destroy]
-
+  
+  add_breadcrumb "Home" , :root_path
+  add_breadcrumb "EvolucaoTipo", :evolucao_tipos_path
+  
   # GET /evolucao_tipos
   # GET /evolucao_tipos.json
   def index
     @evolucao_tipos = EvolucaoTipo.all
+    add_breadcrumb "index", evolucao_tipos_path, :title => "Volta para o index"
   end
 
   # GET /evolucao_tipos/1
@@ -20,6 +24,7 @@ class EvolucaoTiposController < ApplicationController
 
   # GET /evolucao_tipos/1/edit
   def edit
+    add_breadcrumb "index", evolucao_tipos_path, :title => "Volta para o index"
   end
 
   # POST /evolucao_tipos

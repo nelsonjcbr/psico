@@ -24,7 +24,7 @@ A fazer
 [N] Ao entrar na evolucao, ativar o campo tipo, pq com select o usuario entra facil em Acolhimento/Evolucao/Alta
 [X] Arrumar o show da evolucao, esta com layout ruim
 [X] Arrumar a impressão das fichas, aproveirar o que foi feito no show
-[ ] Cadastro do paciente, só pra consulta, o show está estranho
+[X] Cadastro do paciente, só pra consulta, o show está estranho
 [ ] Internações só pra consulta
 [ ] Altas só pra consulta
 [ ] Configurar para pt-BR

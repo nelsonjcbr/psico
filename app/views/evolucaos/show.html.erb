@@ -20,7 +20,7 @@
         <% end %>   
       <% else %>
         <dt><strong><%= campo.titulo %></strong></dt>
-        <dd><%= @evolucao.propriedades[campo.nome] %></dd>
+        <dd><%= simple_format(@evolucao.propriedades[campo.nome]) %></dd>
       <% end %>
   <% end %>
 

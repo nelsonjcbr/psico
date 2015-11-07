@@ -33,6 +33,11 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :development do
+  # bundle exec rake doc:rails generates the API under doc/api.
+  gem 'mina'
+end
+
 gem 'kaminari'
 gem 'bootstrap-kaminari-views'
 gem 'rails4-autocomplete', '~> 1.0.7'
@@ -60,3 +65,5 @@ gem 'wicked_pdf'
 gem 'devise', '3.4.1'
 
 gem 'simple_form'
+
+gem 'breadcrumbs_on_rails'
