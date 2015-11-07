@@ -15,7 +15,7 @@
     </tr>
   </thead>
   <tbody>
-    <% @evolucaos.each do |evolucao| %>
+    <% @evolucaos.order('created_at desc').each do |evolucao| %>
       <tr>
         <td><%= link_to evolucao.id, evolucao_path(evolucao) %></td>
         <td><%= evolucao.paciente.nome if evolucao.paciente unless @paciente %></td>
