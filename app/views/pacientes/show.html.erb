@@ -121,3 +121,11 @@
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
               :class => 'btn btn-danger' %>
 </div>
+
+  <%= render :partial => 'evolucao' %>
+
+<%= form_tag new_evolucao_path, method: :get do %>
+  <%= select_tag :evolucao_tipo_id, options_from_collection_for_select(EvolucaoTipo.ativos, :id, :nome) %>
+  <%= hidden_field_tag(:paciente_id, @paciente.id, :id => "id") %>
+  <%= submit_tag "Nova", nome: nil, :class => 'btn btn-primary' %>
+<% end %>

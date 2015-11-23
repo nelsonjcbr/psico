@@ -14,17 +14,13 @@ bundle : entrar com usuario inovadora na pasta psico
 Coloquei mais CSS no scaffold para funcionar o bs-callout como na pagina do bootstrap
 
 A fazer
-[x] Simple form
-[x] Colocar marca para desabilitar um tipo de evolução e mensagem dizendo que um tipo de evolução não deve ser alterado,
-    o Sistema guarda só o tipo da evolucao, depois os campos
-[x] Alterar a tela de evolução, colocar a pergunta em texto para poder pular linha, fica melhor nos casos de check pq o primeiro 
-    check esta sendo colocado ao lado da primeira linha, ou achar outra forma para colocar esses checks.
-[x] Melhor Tela de questionario, perguntas check
+[ ] Na evolucao link para paciente
+[ ] No show do paciente listar as evolucoes
+[ ] Impressão das fichas, colocar cabeçalho com dados do hospital
+
 [ ] Breadcrumb
 [N] Ao entrar na evolucao, ativar o campo tipo, pq com select o usuario entra facil em Acolhimento/Evolucao/Alta
-[X] Arrumar o show da evolucao, esta com layout ruim
 [X] Arrumar a impressão das fichas, aproveirar o que foi feito no show
-[X] Cadastro do paciente, só pra consulta, o show está estranho
 [ ] Internações só pra consulta
 [ ] Altas só pra consulta
 [ ] Configurar para pt-BR

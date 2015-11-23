@@ -19,7 +19,6 @@ class EvolucaosController < ApplicationController
       format.html
 
       format.pdf { render pdf: "evolucao-report", encoding: "utf-8",
-        header: {center: "Hospital São Roque"},
         footer: { center: "[page] of [topage]" }
       }
     end
