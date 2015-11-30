@@ -1,21 +1,23 @@
 <table class="table table-striped">
   <% @paciente.evolucaos.order('created_at desc').each do |e| %>
     <tbody>
-      <tr>
-        <td><%= link_to e.id, evolucao_path(e.id) %></td>
-        <td><%= e.evolucao_tipo.nome %></td>
-        <td><%= e.data %></td>
-        <td><%=l e.created_at %></td>
-        <td>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_evolucao_path(e), :class => 'btn btn-mini' %>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      evolucao_path(e),
-                      :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                      :class => 'btn btn-mini btn-danger' %>
-        </td>
-      </tr>
+      <% if current_user.has_role? :psicologa or e.evolucao_tipo.nome != 'Evolução' %>
+        <tr>
+          <td><%= link_to e.id, evolucao_path(e.id) %></td>
+          <td><%= e.evolucao_tipo.nome %></td>
+          <td><%= e.data %></td>
+          <td><%=l e.created_at %></td>
+          <td>
+            <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                        edit_evolucao_path(e), :class => 'btn btn-mini' %>
+            <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                        evolucao_path(e),
+                        :method => :delete,
+                        :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                        :class => 'btn btn-mini btn-danger' %>
+          </td>
+        </tr>
+      <% end %>
     </tbody>
   <% end %>
 </table>

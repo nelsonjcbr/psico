@@ -5,6 +5,8 @@ rails g bootstrap:themed Posts
 
 rvm 2.2.0, fiz isso em 26/07 porque instalei o byebug
 
+Usado para cadastro de papeis: https://github.com/RolifyCommunity/rolify
+
 Deploy
 -Inovadora 192.168.34.106 - 
 Usuario: nelson 
@@ -14,10 +16,10 @@ bundle : entrar com usuario inovadora na pasta psico
 Coloquei mais CSS no scaffold para funcionar o bs-callout como na pagina do bootstrap
 
 A fazer
-[ ] Na evolucao link para paciente
-[ ] No show do paciente listar as evolucoes
-[ ] Impressão das fichas, colocar cabeçalho com dados do hospital
-
+[x] Na evolucao link para paciente
+[x] No show do paciente listar as evolucoes
+[x] Impressão das fichas, colocar cabeçalho com dados do hospital
+[ ] Paginação na evolucao
 [ ] Breadcrumb
 [N] Ao entrar na evolucao, ativar o campo tipo, pq com select o usuario entra facil em Acolhimento/Evolucao/Alta
 [X] Arrumar a impressão das fichas, aproveirar o que foi feito no show

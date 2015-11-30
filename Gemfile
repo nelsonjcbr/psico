@@ -67,3 +67,7 @@ gem 'devise', '3.4.1'
 gem 'simple_form'
 
 gem 'breadcrumbs_on_rails'
+
+gem 'pundit'
+
+gem 'rolify'

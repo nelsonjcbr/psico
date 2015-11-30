@@ -55,7 +55,7 @@
         <div class="span12">
           <% if user_signed_in? %>
             <span class="icon-user"> <%= current_user.email %></span>
-            <%= link_to "Desconectar", destroy_user_session_path, :id => 'nav2-logout' , :title => "Sair do sistema"%>
+            <%= link_to "Desconectar", destroy_user_session_path, method: :delete, :id => 'nav2-logout' , :title => "Sair do sistema"%>
             <%= render_breadcrumbs %>
           <% end %> 
           <%= bootstrap_flash %>

@@ -4,4 +4,5 @@ class Evolucao < ActiveRecord::Base
   belongs_to :paciente
   belongs_to :evolucao_tipo
   #serialize :properties, Hash
+  scope :todas, -> { joins(:evolucao_tipo).where('nome <> ? ', 'Evolução') }
 end

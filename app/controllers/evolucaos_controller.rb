@@ -8,8 +8,14 @@ class EvolucaosController < ApplicationController
   def index
 #    byebug
     @paciente = Paciente.find(params[:paciente]) if params[:paciente]
-    @evolucaos = Evolucao.all unless params[:paciente]
-    @evolucaos = Evolucao.where(paciente_id: params[:paciente] ) if params[:paciente]
+    if current_user.has_role? :psicologa 
+      @evolucaos = Evolucao.all unless params[:paciente]
+      @evolucaos = Evolucao.where(paciente_id: params[:paciente] ) if params[:paciente]
+    else
+      @evolucaos = Evolucao.todas unless params[:paciente]
+      @evolucaos = Evolucao.todas.where(paciente_id: params[:paciente] ) if params[:paciente]
+    end
+
   end
 
   # GET /evolucaos/1
