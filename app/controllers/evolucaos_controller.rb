@@ -9,11 +9,11 @@ class EvolucaosController < ApplicationController
 #    byebug
     @paciente = Paciente.find(params[:paciente]) if params[:paciente]
     if current_user.has_role? :psicologa 
-      @evolucaos = Evolucao.all unless params[:paciente]
-      @evolucaos = Evolucao.where(paciente_id: params[:paciente] ) if params[:paciente]
+      @evolucaos = Evolucao.page params[:page] unless params[:paciente]
+      @evolucaos = Evolucao.where(paciente_id: params[:paciente] ).page params[:page] if params[:paciente]
     else
-      @evolucaos = Evolucao.todas unless params[:paciente]
-      @evolucaos = Evolucao.todas.where(paciente_id: params[:paciente] ) if params[:paciente]
+      @evolucaos = Evolucao.todas.page params[:page] unless params[:paciente]
+      @evolucaos = Evolucao.todas.where(paciente_id: params[:paciente] ).page params[:page] if params[:paciente]
     end
 
   end

@@ -3,6 +3,7 @@ pt-BR:
     models:
       viaaplic: Via de Aplicação
       solexame: Solicitação de Exame
+      evolucao: Evolução
 
         # formatos de data e hora
   date:
